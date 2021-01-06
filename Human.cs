@@ -6,6 +6,7 @@ namespace WyprawaNa8k
     {
         public Human()
         {
+            
             Console.WriteLine("Person is a Human.");
         }
     }
