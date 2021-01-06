@@ -8,6 +8,7 @@ namespace WyprawaNa8k
         {
             Person.SayHello();
             Person person = new Person();
+            
         }
 
         static void Strings()
