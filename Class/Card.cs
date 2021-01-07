@@ -33,4 +33,14 @@ public class Card
         allTraces.Add(trace);
         Console.WriteLine($"Dodano: {trace.Kilometers}km. \nData: {trace.date.Day}.{trace.date.Month}.{trace.date.Year}. \nNotatka: {trace.Note}");
     }
+
+    public string GetAccountHistory()
+    {
+        string wycieczka;
+        foreach (var trace in allTraces)
+        {
+            
+        }
+        return wycieczka;
+    }
 }
