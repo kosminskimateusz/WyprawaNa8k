@@ -6,8 +6,16 @@ namespace WyprawaNa8k
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
-            Person.SayHello();
+            // Person person = new Person();
+            // Person.SayHello();
+
+            var card = new Card("Mateusz");
+            Console.WriteLine($"Card {card.Number} was created for {card.Owner}.");
+            card.RegisterNewTrace(32, "Świetna trasa po Caryńskiej.");
+            card.RegisterNewTrace(62, "Piękne połoniny");
+
+            var card1 = new Card("Michał");
+            Console.WriteLine($"Card {card1.Number} was created for {card1.Owner}.");
         }
 
         static void Strings()
