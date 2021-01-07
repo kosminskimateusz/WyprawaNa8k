@@ -17,7 +17,8 @@ namespace WyprawaNa8k
             card.RegisterNewTrace(16, "Wyprawa wzdłuż rzeki");
             card.RegisterNewTrace(31, "Zdobyty najwyższy szczyt");
 
-            Console.WriteLine(card.GetAccountHistory());
+            Console.WriteLine("Zwykły string:\n\n" + card.GetAccountHistory());
+            Console.WriteLine("StringBuilder:\n\n" + card.GetAccountHistoryWithStringBuilder());
 
             var card1 = new Card("Michał");
             Console.WriteLine($"Card {card1.Number} was created for {card1.Owner}.");

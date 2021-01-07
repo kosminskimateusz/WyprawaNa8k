@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Collections.Generic;
 
 public class Card
@@ -36,15 +37,30 @@ public class Card
 
     public string GetAccountHistory()
     {
-        string wycieczka = "";
+        string trace = "";
         decimal allKilometers = 0;
         foreach (var tr in allTraces)
         {
-            string tmpWycieczka = $"Dystans:\t\t{tr.Kilometers}km.\nData: \t\t\t{tr.date.Day} . {tr.date.Month} . {tr.date.Year}.\nOpis: \t\t\t{tr.Note}\n";
+            string tmpWycieczka = $"Dystans:\t\t{tr.Kilometers}km.\nData: \t\t\t{tr.date.Day}.{tr.date.Month}.{tr.date.Year}.\nOpis: \t\t\t{tr.Note}\n";
             allKilometers += tr.Kilometers;
             string tmpPart2Wycieczka = $"\nSuma kilometrów: \t {allKilometers}km.\n\n";
-            wycieczka += tmpWycieczka + tmpPart2Wycieczka;
+            trace += tmpWycieczka + tmpPart2Wycieczka;
         }
-        return wycieczka;
+        return trace;
+    }
+
+    public string GetAccountHistoryWithStringBuilder()
+    {
+        StringBuilder sb = new StringBuilder();
+        decimal allKilometers = 0;
+        foreach (var tr in allTraces)
+        {
+            sb.AppendLine($"Dystans:\t\t{tr.Kilometers}km.");
+            sb.AppendLine($"Data: \t\t\t{tr.date.Day}.{tr.date.Month}.{tr.date.Year}.");
+            sb.AppendLine($"Opis: \t\t\t{tr.Note}\n");
+            allKilometers += tr.Kilometers;
+            sb.AppendLine($"Suma kilometrów: \t{allKilometers}km.");
+        }
+        return sb.ToString();
     }
 }
