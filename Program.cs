@@ -10,9 +10,14 @@ namespace WyprawaNa8k
             // Person.SayHello();
 
             var card = new Card("Mateusz");
-            Console.WriteLine($"Card {card.Number} was created for {card.Owner}.");
-            card.RegisterNewTrace(32, "Świetna trasa po Caryńskiej.");
-            card.RegisterNewTrace(62, "Piękne połoniny");
+            Console.WriteLine($"Card {card.Number} was created for {card.Owner}.\n");
+
+            card.RegisterNewTrace(13, "Świetna trasa po Caryńskiej.");
+            card.RegisterNewTrace(22, "Piękne połoniny");
+            card.RegisterNewTrace(16, "Wyprawa wzdłuż rzeki");
+            card.RegisterNewTrace(31, "Zdobyty najwyższy szczyt");
+
+            Console.WriteLine(card.GetAccountHistory());
 
             var card1 = new Card("Michał");
             Console.WriteLine($"Card {card1.Number} was created for {card1.Owner}.");

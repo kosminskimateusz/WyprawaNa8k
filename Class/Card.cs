@@ -31,15 +31,19 @@ public class Card
     {
         var trace = new Trace(kilometers, note);
         allTraces.Add(trace);
-        Console.WriteLine($"Dodano: {trace.Kilometers}km. \nData: {trace.date.Day}.{trace.date.Month}.{trace.date.Year}. \nNotatka: {trace.Note}");
+        // Console.WriteLine($"Dodano: {trace.Kilometers}km. \nData: {trace.date.Day}.{trace.date.Month}.{trace.date.Year}. \nNotatka: {trace.Note}");
     }
 
     public string GetAccountHistory()
     {
-        string wycieczka;
-        foreach (var trace in allTraces)
+        string wycieczka = "";
+        decimal allKilometers = 0;
+        foreach (var tr in allTraces)
         {
-            
+            string tmpWycieczka = $"Dystans:\t\t{tr.Kilometers}km.\nData: \t\t\t{tr.date.Day} . {tr.date.Month} . {tr.date.Year}.\nOpis: \t\t\t{tr.Note}\n";
+            allKilometers += tr.Kilometers;
+            string tmpPart2Wycieczka = $"\nSuma kilometrów: \t {allKilometers}km.\n\n";
+            wycieczka += tmpWycieczka + tmpPart2Wycieczka;
         }
         return wycieczka;
     }
