@@ -3,16 +3,16 @@
 namespace WyprawaNa8k
 {
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
-            Person.SayHello();
             Person person = new Person();
+            Person.SayHello();
         }
 
         static void Strings()
         {
-                string name = "Mat";
+            string name = "Mat";
             Console.WriteLine("Hello " + name);
             Console.WriteLine($"Cześć {name.PadLeft(15)}, ilość znaków: {name.Length}");
             string hello = "Witaj Ziom";
@@ -43,10 +43,10 @@ namespace WyprawaNa8k
 
             Console.WriteLine($"Range of double is from {dMin} to {dMax}.");
 
-            double a =1;
+            double a = 1;
             double b = 3;
 
-            Console.WriteLine(a/b);
+            Console.WriteLine(a / b);
         }
 
         static void WorkWithDecimals()
@@ -54,7 +54,7 @@ namespace WyprawaNa8k
             decimal a = 1.0M;
             decimal b = 3.0M;
 
-            Console.WriteLine(a/b);
+            Console.WriteLine(a / b);
         }
     }
 }
