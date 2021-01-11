@@ -24,7 +24,30 @@ namespace WyprawaNa8k
             Console.WriteLine($"Card {card1.Number} was created for {card1.Owner}.");
 
             var cardSherpa = new SherpaCard("Mateusz", "kosmen");
+
+            DateTime startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 13, 11, 23, 00);
+            DateTime endData = DateTime.Now;
+            int kilometers = 32;
+
+            cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+
             
+            startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 10, 14, 32, 00);
+            endData = DateTime.Now;
+            kilometers = 18;
+
+            cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+
+            
+            startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 6, 8, 23, 00);
+            endData = DateTime.Now;
+            kilometers = 25;
+
+            cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+
+            Console.WriteLine(cardSherpa.ShowTrips());
+
+            System.Console.WriteLine(DateTime.Now.Day);
         }
 
         static void Strings()
