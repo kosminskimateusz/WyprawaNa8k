@@ -6,11 +6,13 @@ namespace WyprawaNa8k
 {
     public class SherpaCard : Card
     {
+        public static List<Card> cards {get;set;}
         public string SherpaId { get; set; }
-        private List<TripWithGroup> ListOfTripsWithGroup = new List<TripWithGroup>();
+        public List<TripWithGroup> ListOfTripsWithGroup = new List<TripWithGroup>();
         public SherpaCard(string owner, string sherpaId) : base(owner)
         {
             this.SherpaId = sherpaId;
+            // cards.Add();
         }
         public void RegisterNewTripWithGroup(DateTime startTime, DateTime endTime, int kilometers)
         {

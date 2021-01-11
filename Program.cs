@@ -24,12 +24,20 @@ namespace WyprawaNa8k
             // Console.WriteLine($"Card {card1.Number} was created for {card1.Owner}.");
 
             var cardSherpa = new SherpaCard("Mateusz", "kosmen");
+            var cardSherpa1 = new SherpaCard("Kamil", "kamien");
+            GuideMember guideWojtek = new GuideMember("Wojciech Okejka", "okejGuide");
+
             int kilometers;
 
             DateTime startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 13, 11, 23, 00);
             DateTime endData = DateTime.Now;
             kilometers = 32;
             cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+            cardSherpa1.RegisterNewTripWithGroup(startData, endData, kilometers);
+            
+
+            guideWojtek.RegisterNewTripWithMembers(0,cardSherpa);
+            guideWojtek.RegisterNewTripWithMembers(0,cardSherpa1);
 
             
             startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 10, 14, 32, 00);
@@ -37,12 +45,17 @@ namespace WyprawaNa8k
             kilometers = 18;
             cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
             
+            guideWojtek.RegisterNewTripWithMembers(1, cardSherpa);
+
             startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 6, 8, 23, 00);
             endData = DateTime.Now;
             kilometers = 114;
             cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+            
+            guideWojtek.RegisterNewTripWithMembers(2, cardSherpa);
 
-            Console.WriteLine(cardSherpa.ShowTrips());
+            // guideWojtek.ShowTripMembers(1);
+            // Console.WriteLine(cardSherpa.ShowTrips());
         }
     }
 }
