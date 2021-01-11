@@ -22,6 +22,9 @@ namespace WyprawaNa8k
 
             var card1 = new Card("Michał");
             Console.WriteLine($"Card {card1.Number} was created for {card1.Owner}.");
+
+            var cardSherpa = new SherpaCard("Mateusz", "kosmen");
+            
         }
 
         static void Strings()
