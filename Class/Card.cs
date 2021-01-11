@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 
-public class Card
+public abstract class Card
 {
     private static int cardNumberSeed = 1234567890;
     public string Number { get; }
