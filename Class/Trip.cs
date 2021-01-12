@@ -4,19 +4,25 @@ namespace WyprawaNa8k
 {
     public class Trip
     {
-        public int TripNumber { get; set; }
-        public List<Card> Members = new List<Card>();
+        public string TripName { get; set; }
+        public List<Card> TripMembers = new List<Card>();
 
-        public Trip(int tripNumber, List<Card> members)
+        public Trip(string tripName, List<Card> members)
         {
-            this.TripNumber = tripNumber;
+            this.TripName = tripName;
             foreach (var member in members)
             {
-                if (!Members.Contains(member))
+                if (!TripMembers.Contains(member))
                 {
-                    Members.Add(member);
+                    TripMembers.Add(member);
                 }
             }
+        }
+
+        public List<Card> ShowMembersOfTrip(Trip trip)
+        {
+
+            return TripMembers;
         }
     }
 }

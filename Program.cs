@@ -33,29 +33,38 @@ namespace WyprawaNa8k
             DateTime endData = DateTime.Now;
             kilometers = 32;
             cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+            guideWojtek.RegisterNewMember(cardSherpa);
             cardSherpa1.RegisterNewTripWithGroup(startData, endData, kilometers);
+            guideWojtek.RegisterNewMember(cardSherpa1);
+            guideWojtek.RegisterNewMember(card);
             
 
-            guideWojtek.RegisterNewTripWithMembers(0,cardSherpa);
-            guideWojtek.RegisterNewTripWithMembers(0,cardSherpa1);
+            guideWojtek.RegisterNewTripWithMembers("Wycieczka na Wetlińską");
 
             
             startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 10, 14, 32, 00);
             endData = DateTime.Now;
             kilometers = 18;
             cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
-            
-            guideWojtek.RegisterNewTripWithMembers(1, cardSherpa);
+            guideWojtek.RegisterNewMember(cardSherpa);
+            guideWojtek.RegisterNewMember(card1);
+
+            guideWojtek.RegisterNewTripWithMembers("Wycieczka na Caryńską");
 
             startData = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 6, 8, 23, 00);
             endData = DateTime.Now;
             kilometers = 114;
             cardSherpa.RegisterNewTripWithGroup(startData, endData, kilometers);
+            cardSherpa1.RegisterNewTripWithGroup(startData, endData, kilometers);
+            guideWojtek.RegisterNewMember(card);
+            guideWojtek.RegisterNewMember(card1);
+            guideWojtek.RegisterNewMember(cardSherpa);
+            guideWojtek.RegisterNewMember(cardSherpa1);
             
-            guideWojtek.RegisterNewTripWithMembers(2, cardSherpa);
+            guideWojtek.RegisterNewTripWithMembers("Wycieczka wzdłuż Sanu");
 
-            // guideWojtek.ShowTripMembers(1);
-            // Console.WriteLine(cardSherpa.ShowTrips());
+            Console.WriteLine(cardSherpa.Trips());
+            guideWojtek.ShowTrips();
         }
     }
 }

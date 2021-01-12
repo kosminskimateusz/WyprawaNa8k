@@ -8,6 +8,13 @@ public abstract class Card
     public string Number { get; }
     public string Owner { get; }
     public List<Trace> allTraces = new List<Trace>();
+
+    public Card(string owner)
+    {
+        this.Owner = owner;
+        this.Number = cardNumberSeed.ToString();
+        cardNumberSeed++;
+    }
     public decimal Distance
     {
         get
@@ -21,13 +28,6 @@ public abstract class Card
             return distance;
         }
     }
-    public Card(string owner)
-    {
-        this.Owner = owner;
-        this.Number = cardNumberSeed.ToString();
-        cardNumberSeed++;
-    }
-
     public void RegisterNewTrace(decimal kilometers, string note)
     {
         var trace = new Trace(kilometers, note);

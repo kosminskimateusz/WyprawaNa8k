@@ -9,8 +9,6 @@ namespace WyprawaNa8k
         public MemberCard(string owner, string organisation) : base(owner)
         {
             this.Organisation = organisation;
-            
-            // cards.Add();
         }
     }
 }

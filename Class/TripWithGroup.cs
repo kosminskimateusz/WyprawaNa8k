@@ -9,6 +9,7 @@ namespace WyprawaNa8k
         public DateTime EndTime { get; set; }
         public int Kilometers { get; set; }
         public TimeSpan Duration { get; set; }
+        
         public TripWithGroup(DateTime startTime, DateTime endTime, int kilometers)
         {
             this.StartTime = startTime;

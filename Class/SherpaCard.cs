@@ -20,7 +20,7 @@ namespace WyprawaNa8k
             ListOfTripsWithGroup.Add(trip);
         }
 
-        public string ShowTrips()
+        public string Trips()
         {
             string text = "Oto lista wycieczek:\n";
             StringBuilder showTripsStringBuilder = new StringBuilder(text);
